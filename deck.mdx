@@ -1,32 +1,73 @@
+import {
+  Image,
+  themes,
+} from 'mdx-deck'
+
+const { future, prism } = themes
+
+export const themes = [
+  future,
+  prism
+]
+
 
 <Head>
-  <title>为什么需要重构</title>
+  <title>dddd</title>
 </Head>
 
 # Hello!
 
----
+---------------------
 
-## 可维护性差
-1 没有分层(数据层，业务层，展示层)
-  1 获取数据层
-  2 操作数据层
-  3 展示数据层
+## 为什么需要重构
 
-2 逻辑与视图耦合
+<Steps>
 
-3 组件与模块化
-   1 合理组件分类
-   2 组件state props最小化
-   3 一个模块只有统一个出口
+ - 可维护性差
+ - 没有分层
+ - 逻辑与视图耦合
+ - 性能差
 
-4 缺乏文档
-  1 独立的功能模块文档
-  2 注释文档
+</Steps>
 
-## 性能差
+--------------------
 
-----
+<Steps>
+
+  - 获取数据层
+  - 操作数据层
+  - 展示数据层
+
+</Steps>
+
+-----------------------------
+
+ ## 缺乏文档
+
+<Steps>
+
+  - 独立的功能模块文档
+  - 注释文档
+
+</Steps>
+
+
+---------------------------
+
+## 组件与模块化
+
+<Steps>
+
+  - 合理组件分类
+  - 组件state props最小化
+  - 一个模块只有统一个出口
+  
+</Steps>
+
+
+
+-------------------------------------------
+
 # Hello, *world*!
 
 Below is an example of JSX embedded in Markdown. <br /> **Try and change
@@ -35,3 +76,149 @@ the background color!**
 <div style={{ padding: '20px', backgroundColor: 'tomato' }}>
   <h3>This is JSX</h3>
 </div>
+
+---------------------
+# Hello, world!
+
+```js
+import React from 'react'
+
+```
+
+```js render=true
+<div
+  style={{backgroundColor: 'rebeccapurple', padding: '20px', marginTop: '20px'}}
+/>
+```
+
+```js live=true
+<div style={{backgroundColor: 'tomato', padding: '20px'}} />
+```
+
+-------------------------
+
+<Steps>
+
+- One
+- Two
+- Three
+- Four
+
+</Steps>
+
+----------------------
+
+<Footer>
+
+Put a logo, handle, or something else here...
+
+</Footer>
+
+# My Presentation
+
+-------------------
+
+<Header>
+
+Put a logo, handle, or ...
+
+</Header>
+
+# My Presentation
+
+--------------
+
+# Slide Content
+
+<Notes>
+
+- Only visible in presenter mode
+- Markdown syntax can be used with empty lines around the content
+
+</Notes>
+
+-------------------
+
+<div style={{ padding: '10px 30px', backgroundColor: 'tomato' }}>
+  <h2>Try making this heading have the color green</h2>
+</div>
+
+------------------------
+
+<Image
+  src='https://source.unsplash.com/random/768x2048?brooklyn'
+  style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: 'white',
+    backgroundColor: 'black',
+  }}>
+
+## Background Image
+
+</Image>
+
+
+---
+
+<Invert>
+
+## Invert Layout
+
+</Invert>
+
+---
+
+<Split>
+
+![](https://source.unsplash.com/random/768x2048?brooklyn)
+
+## Split Layout
+
+</Split>
+
+---
+
+<SplitRight>
+
+![](https://source.unsplash.com/random/768x2048?brooklyn)
+
+## SplitRight Layout
+
+</SplitRight>
+
+---
+
+<Horizontal>
+
+## Horizontal Layout
+
+![](https://source.unsplash.com/random/768x2048?brooklyn)
+
+![](https://source.unsplash.com/random/768x2048?brooklyn)
+
+</Horizontal>
+
+---
+
+<FullScreenCode>
+
+```jsx
+<Button>FullScreenCode Layout</Button>
+```
+
+</FullScreenCode>
+
+-------------------
+
+# Hello!
+
+---
+
+```js
+import React from 'react'
+
+export default props =>
+  <h1>Highlighting</h1>
+```
